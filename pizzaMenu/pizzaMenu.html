@@ -1,0 +1,487 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+        <link rel="stylesheet" type="text/css" href="./Sytlesheet/pizzaMenu.css">
+
+        <title>You Wanna A Pizza Me!</title>
+    </head>
+    <body background="./Stylesheet/images/pizza-bg.png">
+     
+        <div class="jumbotron bg-danger text-white py-2 jumbotron-fluid">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-2">
+                        <img src="./Stylesheet/images/pizza-chef.png" alt="pizza chef" style="height: 150px;">
+                    </div>
+                    <div class="col-lg-10">
+                        <h1 class="display-4">You Wanna Pizza Me!</h1>
+                        <p class="lead">Build your own pizza for pickup or delivery</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <!-- BEGIN order form-->
+    <div class="container">
+    <form>
+        <div class="container px-lg-3">
+            <div class="row">
+                <div class="col-lg-5 bg-danger rounded-sm">
+                    <h4 class="text-white">The Basics</h4>
+                    <h5 class="text-white">Select an option from each of the following</h5>
+                </div>
+            </div>
+            <div class="row mt-2">
+                <div class="col-md-6 col-lg-3">
+                    <div class="card mb-2" style="width: 15rem; height: 325px;">
+                        <img src="./stylesheet/images/pizza.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Size</h5>
+                            <div class="form-group size" id="sizeCheck">
+                                <div class="form-check">
+                                    <input type="radio" id="Personal" value="Personal" name="sizeRadio" class="form-check-input pizzaSize">
+                                    <label class="form-check-label" for="Personal">Personal $6.00</label>
+                                </div>
+                                <div class="form-check">
+                                    <input type="radio" id="Medium" value="Medium" name="sizeRadio" class="form-check-input pizzaSize">
+                                    <label class="form-check-label" for="Medium">Medium $10.00</label>
+                                </div>
+                                <div class="form-check">
+                                    <input type="radio" id="Large" value="Large" name="sizeRadio" class="form-check-input pizzaSize">
+                                    <label class="form-check-label" for="Large">Large $14.00</label>
+                                </div>
+                                <div class="form-check">
+                                    <input type="radio" id="extraLarge" value="Extra Large" name="sizeRadio" class="form-check-input pizzaSize">
+                                    <label class="form-check-label" for="extraLarge">Extra Large $16.00</label>
+                                </div>
+                            </div>
+                            <p class="card-text"><small class="text-muted" hidden>Prices updated 07/12/2019</small></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card mb-2" style="width: 15rem; height: 325px;">
+                        <img src="./stylesheet/images/crust.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Crust</h5>
+                            <div class="form-group crust" id="crustCheck">
+                            <div class="form-check">
+                                <input type="radio" id="Plain" value="Plain" name="crustRadio" class="form-check-input pizzaCrust">
+                                <label class="form-check-label" for="Plain">Plain</label>
+                            </div>
+                            <div class="form-check">
+                                <input type="radio" id="garlicButter" value="Garlic butter" name="crustRadio" class="form-check-input pizzaCrust">
+                                <label class="form-check-label" for="garlicButter">Garlic butter</label>
+                            </div>
+                            <div class="form-check">
+                                <input type="radio" id="cheeseStuffed" value="Cheese Stuffed +$3.00" name="crustRadio" class="form-check-input pizzaCrust">
+                                <label class="form-check-label" for="cheeseStuffed">Cheese Stuffed +$3.00</label>
+                            </div>
+                            <div class="form-check">
+                                <input type="radio" id="Spicy" value="Spicy" name="crustRadio" class="form-check-input pizzaCrust">
+                                <label class="form-check-label" for="Spicy">Spicy</label>
+                            </div>
+                            <div class="form-check">
+                                <input type="radio" id="houseSpecial" value="House special" name="crustRadio" class="form-check-input pizzaCrust">
+                                <label class="form-check-label" for="houseSpecial">House special</label>
+                            </div>
+                            </div>
+                            <p class="card-text"><small class="text-muted" hidden>Prices updated 07/12/2019</small></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card mb-2" style="width: 15rem; height: 325px;">
+                        <img src="./stylesheet/images/pizza-sauce.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Sauce</h5>
+                            <div class="form-group" id="sauceCheck">
+                            <div class="form-check">
+                                <input type="radio" id="Marinara" value="Marinara" name="sauceRadio" class="form-check-input pizzaSauce">
+                                <label class="form-check-label" for="Marinara">Marinara</label>
+                            </div>
+                            <div class="form-check">
+                                <input type="radio" id="White" value="White" name="sauceRadio" class="form-check-input pizzaSauce">
+                                <label class="form-check-label" for="White">White</label>
+                            </div>
+                            <div class="form-check">
+                                <input type="radio" id="Barbeque" value="Barbeque" name="sauceRadio" class="form-check-input pizzaSauce">
+                                <label class="form-check-label" for="Barbeque">Barbeque</label>
+                            </div>
+                            <div class="form-check">
+                                <input type="radio" id="noSauce" value="None" name="sauceRadio" class="form-check-input pizzaSauce">
+                                <label class="form-check-label" for="noSauce">None</label>
+                            </div>
+                            </div>
+                            <p class="card-text"><small class="text-muted" hidden>Prices updated 07/12/2019</small></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card mb-2" style="width: 15rem; height: 325px;">
+                        <img src="./stylesheet/images/Mozzarella-cheese.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Cheese</h5>
+                            <div class="form-group" id="cheeseCheck">
+                            <div class="form-check">
+                                <input type="radio" id="Regular" value="Regular" name="cheeseRadio" class="form-check-input pizzaCheese">
+                                <label class="form-check-label" for="Regular">Regular</label>
+                            </div>
+                            <div class="form-check">
+                                <input type="radio" id="noCheese" value="No Cheese" name="cheeseRadio" class="form-check-input pizzaCheese">
+                                <label class="form-check-label" for="noCheese">No Cheese</label>
+                            </div>
+                            <div class="form-check">
+                                <input type="radio" id="extraCheese" value="Extra Cheese +$3.00" name="cheeseRadio" class="form-check-input pizzaCheese">
+                                <label class="form-check-label" for="extraCheese">Extra Cheese +$3.00</label>
+                            </div>
+                            </div>
+                            <p class="card-text"><small class="text-muted" hidden>Prices updated 07/12/2019</small></p>
+                        </div>
+                    </div>
+                </div>
+            </form>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5 bg-danger rounded-sm">
+                    <h4 class="text-white">The Toppings</h4>
+                    <h5 class="text-white">Select as many as you like from the following</h5>
+                </div>
+                <div class="col-lg-1"></div>
+                <div class="col-lg-5 bg-danger rounded-sm">
+                    <h4 class="text-white">The Finale</h4>
+                    <h5 class="text-white">Let's get this pizza started</h5>
+                </div>
+            </div>
+            <div class="row mt-2">
+                <div class="col-md-6 col-lg-3">
+                    <div class="card mb-2" style="width: 15rem; height: 435px;">
+                        <img src="./stylesheet/images/sausage.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Meats</h5>
+                                <div class="form-group">
+                                <div class="form-check">
+                                        <input type="checkbox" value="Pepperoni" name="meatsCheckbox" class="form-check-input pizzaMeats" id="Pepperoni">
+                                        <label class="form-check-label" for="Pepperoni">Pepperoni</label>
+                                </div>
+                                <div class="form-check">
+                                        <input type="checkbox" value="Sausage" name="meatsCheckbox" class="form-check-input pizzaMeats" id="Sausage">
+                                        <label class="form-check-label" for="Sausage">Sausage</label>
+                                </div>
+                                <div class="form-check">
+                                        <input type="checkbox" value="Canadian Bacon" name="meatsCheckbox" class="form-check-input pizzaMeats" id="canadianBacon">
+                                        <label class="form-check-label" for="canadianBacon">Canadian Bacon</label>
+                                </div>
+                                <div class="form-check">
+                                        <input type="checkbox" value="Ground Beef" name="meatsCheckbox" class="form-check-input pizzaMeats" id="groundBeef">
+                                        <label class="form-check-label" for="groundBeef">Ground Beef</label>
+                                </div>
+                                <div class="form-check">
+                                        <input type="checkbox" value="Anchovy" name="meatsCheckbox" class="form-check-input pizzaMeats" id="Anchovy">
+                                        <label class="form-check-label" for="Anchovy">Anchovy</label>
+                                </div>
+                                <div class="form-check">
+                                        <input type="checkbox" value="Chicken" name="meatsCheckbox" class="form-check-input pizzaMeats" id="Chicken">
+                                        <label class="form-check-label" for="Chicken">Chicken</label>
+                                </div>
+                                </div>
+                                <p class="card-text"><small class="text-muted">First free, +$1.00 each additional</small></p>
+                            </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card mb-2" style="width: 15rem; height: 435px;">
+                        <img src="./stylesheet/images/olives.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Veggies</h5>
+                                <div class="form-group">
+                                <div class="form-check">
+                                    <input type="checkbox" value="Tomatoes" name="veggiesCheckbox" class="form-check-input pizzaVeggies" id="Tomatoes">
+                                    <label class="form-check-label" for="Tomatoes">Tomatoes</label>
+                                </div>
+                                <div class="form-check">
+                                    <input type="checkbox" value="Onions" name="veggiesCheckbox" class="form-check-input pizzaVeggies" id="Onions">
+                                    <label class="form-check-label" for="Onions">Onions</label>
+                                </div>
+                                <div class="form-check">
+                                    <input type="checkbox" value="Olives" name="veggiesCheckbox" class="form-check-input pizzaVeggies" id="Olives">
+                                    <label class="form-check-label" for="Olives">Olives</label>
+                                </div>
+                                <div class="form-check">
+                                    <input type="checkbox" value="Green Peppers" name="veggiesCheckbox" class="form-check-input pizzaVeggies" id="greenPeppers">
+                                    <label class="form-check-label" for="greenPeppers">Green Peppers</label>
+                                </div>
+                                <div class="form-check">
+                                    <input type="checkbox" value="Mushrooms" name="veggiesCheckbox" class="form-check-input pizzaVeggies" id="Mushrooms">
+                                    <label class="form-check-label" for="Mushrooms">Mushrooms</label>
+                                </div>
+                                <div class="form-check">
+                                    <input type="checkbox" value="Pineapple" name="veggiesCheckbox" class="form-check-input pizzaVeggies" id="Pineapple">
+                                    <label class="form-check-label" for="Pineapple">Pineapple</label>
+                                </div>
+                                <div class="form-check">
+                                    <input type="checkbox" value="Spinach" name="veggiesCheckbox" class="form-check-input pizzaVeggies" id="Spinach">
+                                    <label class="form-check-label" for="Spinach">Spinach</label>
+                                </div>
+                                <div class="form-check">
+                                    <input type="checkbox" value="Jalapeno" name="veggiesCheckbox" class="form-check-input pizzaVeggies" id="Jalapeno">
+                                    <label class="form-check-label" for="Jalapeno">Jalapeno</label>
+                                </div>
+                                </div>
+                                <p class="card-text"><small class="text-muted">First free, +$1.00 each additional</small></p>
+                            </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <button type="button" class="btn btn-success btn-lg btn-block mb-2" id="placeOrder" onclick="checkSize()" data-toggle="modal" data-target="#exampleModalCenter" style="width: 15rem;">Place order</button>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <button type="reset" class="btn btn-danger btn-lg btn-block mb-2" name="reset" value="clear" style="width: 15rem;">Cancel</button>
+                </div>
+            </div>
+        </div>
+        <!-- Modal -->
+            <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header bg-danger text-white">
+                            <h5 class="modal-title" id="exampleModalCenterTitle">Now You Gotta Pizza Me!</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="container px-1">
+                            <form>
+                                <div class="row">
+                                    <h5 class="mb-0">The Basics</h5>
+                                </div>
+                                <div class="row">
+                                    <div class="col-3 col-md-2 border" id="modalSize">Size</div>
+                                    <div type="text" class="col-7 col-md-8 text-wrap border" id="modalSizeList"></div>
+                                    <div class="col-2 border justify-content-end d-flex" id="modalSizeTotal"></div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-3 col-md-2 border" id="modalCrust">Crust</div>
+                                    <div class="col-7 col-md-8 border" id="modalCrustList"></div>
+                                    <div class="col-2 border justify-content-end d-flex" id="modalCrustTotal"></div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-3 col-md-2 border" id="modalSauce">Sauce</div>
+                                    <div class="col-7 col-md-8 text-wrap border" id="modalSauceList"></div>
+                                    <div class="col-2 border justify-content-end d-flex" id="modalSauceTotal"></div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-3 col-md-2 border" id="modalCheese">Cheese</div>
+                                    <div class="col-7 col-md-8 text-wrap border" id="modalCheeseList"></div>
+                                    <div class="col-2 border justify-content-end d-flex" id="modalCheeseTotal"></div>
+                                </div>
+                                <div class="row">
+                                    <h5 class="mb-0">The Toppings</h5>
+                                </div>
+                                <div class="row">
+                                    <p class="text-muted my-0">First Meat and Veggie free, +$1.00 each for additions of either</p>
+                                </div>
+                                <div class="row">
+                                    <div class="col-3 col-md-2 border" id="modalMeats">Meats</div>
+                                    <div class="col-7 col-md-8 text-wrap border" id="modalMeatsList"></div>
+                                    <div class="col-2 border justify-content-end d-flex" id="modalMeatsTotal"></div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-3 col-md-2 border" id="modalVeggies">Veggies</div>
+                                    <div class="col-7 col-md-8 text-wrap border" id="modalVeggiesList"></div>
+                                    <div class="col-2 border justify-content-end d-flex" id="modalVeggiesTotal"></div>
+                                </div>
+                                <div class="row">
+                                    <h5>The Finale</h5>
+                                </div>
+                                <div class="row">
+                                    <div class="col-7 col-md-8"></div>
+                                    <div class="col-3 col-md-2 justify-content-end d-flex">Subtotal</div>
+                                    <div class="col-2 border" id="modalSubtotal"></div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-7 col-md-8"></div>
+                                    <div class="col-3 col-md-2 justify-content-end d-flex">Tax +10%</div>
+                                    <div class="col-2 border" id="modalTax"></div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-7 col-md-8"></div>
+                                    <div class="col-3 col-md-2 font-weight-bold justify-content-end d-flex">Total</div>
+                                    <div class="col-2 font-weight-bold border" id="modalTotal"></div>
+                                </div>
+                            </form>
+                            </div>
+                        </div>
+                        <div class="modal-footer bg-danger">
+                            <div class="pt-2 pr-3">
+                                <img src="./Stylesheet/images/pizza-chef.png" alt="pizza chef" style="height: 75px;">
+                            </div>
+                            <div class="pt-3 pr-5"><p class="text-white font-weight-bold">&copy;You Wanna Pizza Me! Ltd.</p></div>
+                            <button type="button" class="btn btn-warning" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-success">Spend some dough</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </form>
+    </div>
+
+    <footer class="text-center text-white font-weight-bold my-5">
+        &copy;You Wanna Pizza Me! Ltd.
+    </footer>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <script>
+        
+    /*    var modalSizeList = document.getElementById("modalSizeList");
+        var modalCrustList = document.getElementById("modalCrustList");
+        var modalSauceList = document.getElementById("modalSauceList");
+        var modalCheeseList = document.getElementById("modalCheeseList");
+        var modalMeatsList = document.getElementById("modalMeatsList");
+        var modalVeggiesList = document.getElementById("modalVeggiesList");
+
+        function handleClick() {
+            checkSize();
+            checkCrust();
+            checkSauce();
+            checkCheese();
+            checkMeats();
+            checkVeggies();
+        };
+    */    
+        function checkSize() {
+            var runningSub = 0;
+            var sizeRadio = document.getElementsByClassName("pizzaSize");
+            var txt = "";
+            var sizeTotal = 0;
+            for (var i = 0; i < sizeRadio.length; i++) {
+                if (sizeRadio[i].checked) {
+                    txt = txt + sizeRadio[i].value;
+                }
+                if (txt == "Personal") {
+                    sizeTotal = 6;
+                } else if (txt == "Medium") {
+                    sizeTotal = 10;
+                } else if (txt == "Large") {
+                    sizeTotal = 14;
+                } else if (txt == "Extra Large") {
+                    sizeTotal = 16;
+                }
+            }
+            runningSub = sizeTotal;
+            modalSizeList.innerHTML = txt;
+            modalSizeTotal.innerHTML = sizeTotal+".00";
+            checkCrust(runningSub);
+        };
+        function checkCrust(runningSub) {
+            var runningSub = runningSub;
+            var crustRadio = document.getElementsByClassName("pizzaCrust");
+            var txt = "";
+            var crustTotal = "";
+            for (var i = 0; i < crustRadio.length; i++) {
+                if (crustRadio[i].checked) {
+                    txt = txt + crustRadio[i].value;
+                }
+                if (txt == "Cheese Stuffed +$3.00") {
+                    crustTotal = 3+".00";
+                }else {
+                    crustTotal = " ";
+                }
+            }
+            runningSub = (runningSub + crustTotal)
+            modalCrustList.innerHTML = txt;
+            modalCrustTotal.innerHTML = crustTotal;  
+            checkSauce(runningSub);  
+        };
+        function checkSauce(runningSub) {
+            var sauceRadio = document.getElementsByClassName("pizzaSauce");
+            var txt = "";
+            for (var i = 0; i < sauceRadio.length; i++) {
+                if (sauceRadio[i].checked) {
+                    txt = txt + sauceRadio[i].value;
+                }
+            }
+            modalSauceList.innerHTML = txt; 
+            checkCheese(runningSub);   
+        };
+        function checkCheese(runningSub) {
+            var cheeseRadio = document.getElementsByClassName("pizzaCheese");
+            var txt = "";
+            var cheeseTotal = "";
+            for (var i = 0; i < cheeseRadio.length; i++) {
+                if (cheeseRadio[i].checked) {
+                    txt = txt + cheeseRadio[i].value;
+                }
+                if (txt == "Extra Cheese +$3.00") {
+                    cheeseTotal = 3+".00";
+                }else {
+                    cheeseTotal = " ";
+                }
+            }
+            runningSub = (runningSub + cheeseTotal)
+            modalCheeseList.innerHTML = txt;
+            modalCheeseTotal.innerHTML = cheeseTotal; 
+            checkMeats(runningSub);    
+        };
+        function checkMeats(runningSub) {
+            var items = document.getElementsByClassName("pizzaMeats");
+            var selectedItems = "";
+            var meatsArray = [];
+            var meatsTotal = "";
+            for (var i = 0; i < items.length; i++) {
+                if (items[i].type=='checkbox' && items[i].checked==true) {
+                    selectedItems += items[i].value+"<br>";
+                    meatsArray.push(items[i].value);
+                }
+                if (meatsArray.length < 1) {
+                    meatsTotal = 0;
+                } else {
+                    meatsTotal = meatsArray.length - 1;
+                }
+            }
+            runningSub = (runningSub + meatsTotal)
+            modalMeatsList.innerHTML = selectedItems;
+            modalMeatsTotal.innerHTML = meatsTotal+".00";
+            checkVeggies(runningSub);
+        };
+        function checkVeggies(runningSub) {
+            var items = document.getElementsByClassName("pizzaVeggies");
+            var selectedItems = "";
+            var veggiesArray = [];
+            var VeggiesTotal = "";
+            for (var i = 0; i < items.length; i++) {
+                if (items[i].type=='checkbox' && items[i].checked==true) {
+                    selectedItems += items[i].value+"<br>";
+                    veggiesArray.push(items[i].value);
+                }
+                if (veggiesArray.length < 1) {
+                    VeggiesTotal = 0;
+                } else {
+                    VeggiesTotal = veggiesArray.length - 1;
+                }
+            }
+            runningSub = (runningSub + VeggiesTotal)
+            modalVeggiesList.innerHTML = selectedItems;
+            modalVeggiesTotal.innerHTML = VeggiesTotal+".00";
+            document.getElementById('modalSubTotal').innerHTML = runningSub+".00";
+        };
+        
+    </script>
+
+  </body>
+</html>
