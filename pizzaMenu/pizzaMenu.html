@@ -8,6 +8,8 @@
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
+        <script src="pizzaMenu.js"></script>
+
         <link rel="stylesheet" type="text/css" href="./Sytlesheet/pizzaMenu.css">
 
         <title>You Wanna A Pizza Me!</title>
@@ -307,17 +309,17 @@
                                 <div class="row">
                                     <div class="col-7 col-md-8"></div>
                                     <div class="col-3 col-md-2 justify-content-end d-flex">Subtotal</div>
-                                    <div class="col-2 border" id="modalSubtotal"></div>
+                                    <div class="col-2 border justify-content-end d-flex" id="modalSubTotal"></div>
                                 </div>
                                 <div class="row">
                                     <div class="col-7 col-md-8"></div>
                                     <div class="col-3 col-md-2 justify-content-end d-flex">Tax +10%</div>
-                                    <div class="col-2 border" id="modalTax"></div>
+                                    <div class="col-2 border justify-content-end d-flex" id="modalTax"></div>
                                 </div>
                                 <div class="row">
                                     <div class="col-7 col-md-8"></div>
                                     <div class="col-3 col-md-2 font-weight-bold justify-content-end d-flex">Total</div>
-                                    <div class="col-2 font-weight-bold border" id="modalTotal"></div>
+                                    <div class="col-2 font-weight-bold border justify-content-end d-flex" id="modalTotal"></div>
                                 </div>
                             </form>
                             </div>
@@ -340,148 +342,12 @@
         &copy;You Wanna Pizza Me! Ltd.
     </footer>
 
+  </body>
+
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
-    <script>
-        
-    /*    var modalSizeList = document.getElementById("modalSizeList");
-        var modalCrustList = document.getElementById("modalCrustList");
-        var modalSauceList = document.getElementById("modalSauceList");
-        var modalCheeseList = document.getElementById("modalCheeseList");
-        var modalMeatsList = document.getElementById("modalMeatsList");
-        var modalVeggiesList = document.getElementById("modalVeggiesList");
-
-        function handleClick() {
-            checkSize();
-            checkCrust();
-            checkSauce();
-            checkCheese();
-            checkMeats();
-            checkVeggies();
-        };
-    */    
-        function checkSize() {
-            var runningSub = 0;
-            var sizeRadio = document.getElementsByClassName("pizzaSize");
-            var txt = "";
-            var sizeTotal = 0;
-            for (var i = 0; i < sizeRadio.length; i++) {
-                if (sizeRadio[i].checked) {
-                    txt = txt + sizeRadio[i].value;
-                }
-                if (txt == "Personal") {
-                    sizeTotal = 6;
-                } else if (txt == "Medium") {
-                    sizeTotal = 10;
-                } else if (txt == "Large") {
-                    sizeTotal = 14;
-                } else if (txt == "Extra Large") {
-                    sizeTotal = 16;
-                }
-            }
-            runningSub = sizeTotal;
-            modalSizeList.innerHTML = txt;
-            modalSizeTotal.innerHTML = sizeTotal+".00";
-            checkCrust(runningSub);
-        };
-        function checkCrust(runningSub) {
-            var runningSub = runningSub;
-            var crustRadio = document.getElementsByClassName("pizzaCrust");
-            var txt = "";
-            var crustTotal = "";
-            for (var i = 0; i < crustRadio.length; i++) {
-                if (crustRadio[i].checked) {
-                    txt = txt + crustRadio[i].value;
-                }
-                if (txt == "Cheese Stuffed +$3.00") {
-                    crustTotal = 3+".00";
-                }else {
-                    crustTotal = " ";
-                }
-            }
-            runningSub = (runningSub + crustTotal)
-            modalCrustList.innerHTML = txt;
-            modalCrustTotal.innerHTML = crustTotal;  
-            checkSauce(runningSub);  
-        };
-        function checkSauce(runningSub) {
-            var sauceRadio = document.getElementsByClassName("pizzaSauce");
-            var txt = "";
-            for (var i = 0; i < sauceRadio.length; i++) {
-                if (sauceRadio[i].checked) {
-                    txt = txt + sauceRadio[i].value;
-                }
-            }
-            modalSauceList.innerHTML = txt; 
-            checkCheese(runningSub);   
-        };
-        function checkCheese(runningSub) {
-            var cheeseRadio = document.getElementsByClassName("pizzaCheese");
-            var txt = "";
-            var cheeseTotal = "";
-            for (var i = 0; i < cheeseRadio.length; i++) {
-                if (cheeseRadio[i].checked) {
-                    txt = txt + cheeseRadio[i].value;
-                }
-                if (txt == "Extra Cheese +$3.00") {
-                    cheeseTotal = 3+".00";
-                }else {
-                    cheeseTotal = " ";
-                }
-            }
-            runningSub = (runningSub + cheeseTotal)
-            modalCheeseList.innerHTML = txt;
-            modalCheeseTotal.innerHTML = cheeseTotal; 
-            checkMeats(runningSub);    
-        };
-        function checkMeats(runningSub) {
-            var items = document.getElementsByClassName("pizzaMeats");
-            var selectedItems = "";
-            var meatsArray = [];
-            var meatsTotal = "";
-            for (var i = 0; i < items.length; i++) {
-                if (items[i].type=='checkbox' && items[i].checked==true) {
-                    selectedItems += items[i].value+"<br>";
-                    meatsArray.push(items[i].value);
-                }
-                if (meatsArray.length < 1) {
-                    meatsTotal = 0;
-                } else {
-                    meatsTotal = meatsArray.length - 1;
-                }
-            }
-            runningSub = (runningSub + meatsTotal)
-            modalMeatsList.innerHTML = selectedItems;
-            modalMeatsTotal.innerHTML = meatsTotal+".00";
-            checkVeggies(runningSub);
-        };
-        function checkVeggies(runningSub) {
-            var items = document.getElementsByClassName("pizzaVeggies");
-            var selectedItems = "";
-            var veggiesArray = [];
-            var VeggiesTotal = "";
-            for (var i = 0; i < items.length; i++) {
-                if (items[i].type=='checkbox' && items[i].checked==true) {
-                    selectedItems += items[i].value+"<br>";
-                    veggiesArray.push(items[i].value);
-                }
-                if (veggiesArray.length < 1) {
-                    VeggiesTotal = 0;
-                } else {
-                    VeggiesTotal = veggiesArray.length - 1;
-                }
-            }
-            runningSub = (runningSub + VeggiesTotal)
-            modalVeggiesList.innerHTML = selectedItems;
-            modalVeggiesTotal.innerHTML = VeggiesTotal+".00";
-            document.getElementById('modalSubTotal').innerHTML = runningSub+".00";
-        };
-        
-    </script>
-
-  </body>
 </html>
